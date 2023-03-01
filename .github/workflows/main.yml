@@ -96,5 +96,7 @@ jobs:
       
       # Execute following commands
       run: |
+        cd ./src
         python -m unittest discover
+        cd ../
 
