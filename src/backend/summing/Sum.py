@@ -1,3 +1,3 @@
 class Sum():
-    def sum(self, a, b):
-        return a + b
+    def sum(self, c, d):
+        return c + d
