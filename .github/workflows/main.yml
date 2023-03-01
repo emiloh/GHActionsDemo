@@ -72,7 +72,7 @@ jobs:
     - name: Setup of NodeJS
 
       # Specifies that we want to use the action that sets up node js
-      uses: action/setup-node@v3
+      uses: actions/setup-node@v3
       
       with:
 
