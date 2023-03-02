@@ -61,11 +61,11 @@ jobs:
           **/node_modules
         
         # Specifies the given key we want to store our cache with
-        key: ${{ runner.os }}-node-${{ hashfiles('**/package-lock.json')}}
+        key: ${{ runner.os }}-nodesss-${{ hashfiles('**/package-lock.json')}}
 
         # Specifies keys we are able to restore our cache with. Priotized order top to bottom.
         restore-keys: |
-          ${{ runner.os }}-node-
+          ${{ runner.os }}-nodesss-
           ${{ runner.os }}
     
     # Setting up node js so we can use npm
