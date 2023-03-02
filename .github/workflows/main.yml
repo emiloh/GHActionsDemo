@@ -46,27 +46,27 @@ jobs:
     
     # Now we want to cache our node modules, so we dont have to run npm install everytime the
     # workflow runs. Give it a name so it shows in the workflow, when you run it.
-#    - name: Cache our node modules
+    - name: Cache our node modules
       
       # Giving an id, so we can use it to check cache hit/miss later
-#      id: nodecache
+      id: nodecache
 
       # Specifies that we want to use the cache action in this step
-#      uses: actions/cache@v3
+      uses: actions/cache@v3
       
-#      with:
+      with:
       
         # Specifies the path to the files we want to cache and restore. (in this case node_modules)
-#        path: |
-#          **/node_modules
-
+        path: |
+          **/node_modules
+        
         # Specifies the given key we want to store our cache with
-#        key: ${{ runner.os }}-node-${{ hashfiles('**/package-lock.json')}}
+        key: ${{ runner.os }}-node-${{ hashfiles('**/package-lock.json')}}
 
         # Specifies keys we are able to restore our cache with. Priotized order top to bottom.
-#        restore-keys: |
-#          ${{ runner.os }}-node-
-#          ${{ runner.os }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+          ${{ runner.os }}
     
     # Setting up node js so we can use npm
     - name: Setup of NodeJS
